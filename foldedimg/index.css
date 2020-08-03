@@ -1,0 +1,47 @@
+ul {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  width: 25%;
+  height: 100%;
+  background-image: url("galaxy.jpg");
+  background-size: cover;
+}
+
+li:nth-child(odd) {
+  transform: skewY(20deg);
+  box-shadow: 5px 9px 6px gray;
+}
+
+li:nth-child(even) {
+  transform: skewY(-20deg);
+  box-shadow: 5px 9px 2px gray;
+}
+
+li:nth-child(1) {
+  background-position: 0;
+  border-right: 0.5px solid gray;
+}
+
+li:nth-child(2) {
+  background-position: -125px;
+  border-right: 0.5px solid gray;
+}
+
+li:nth-child(3) {
+  background-position: calc(-125px * 2);
+  border-right: 0.5px solid gray;
+}
+
+li:nth-child(4) {
+  background-position: calc(-125px * 3);
+}
